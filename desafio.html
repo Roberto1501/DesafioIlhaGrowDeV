@@ -11,23 +11,28 @@
 <body>
     <script>
         var valorSaque = parseInt(prompt('Digite o valor que deseja sacar: '));
-document.write('Valor do saque foi de: ' + valorSaque, '<br>');
+        if(valorSaque<=0){
+            alert('Digite um valor valido')
+        } else{
+                document.write('Valor do saque foi de: ' + valorSaque, '<br>');
 
-var growCoins = [50, 10, 5, 1];
- 
+                var growCoins = [50, 10, 5, 1];
+                
 
-for(let i = 0; i < growCoins.length; i++){
+                for(let i = 0; i < growCoins.length; i++){
 
-  let totalGc = parseInt(valorSaque / growCoins[i]);
-  valorSaque = valorSaque % growCoins[i];
+                            let totalGc = parseInt(valorSaque / growCoins[i]);
+                            valorSaque = valorSaque % growCoins[i];
 
-  if(totalGc !== 0){
-    document.write(`${totalGc} growCoins de ${growCoins[i]},00 <br>`);
-}
+                            if(totalGc !== 0){
+                                document.write(`${totalGc} growCoins de ${growCoins[i]},00 <br>`);
+                            }
 
 
 
-}
+                }
+        }
+
 
     </script>
 </body>
